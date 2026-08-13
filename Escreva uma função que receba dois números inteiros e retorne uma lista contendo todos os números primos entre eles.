@@ -1,0 +1,17 @@
+def num_primo(num):
+    if num <= 1:
+        return False
+    for c in range(2, int(num**0.5)+1):
+        if num %c == 0:
+            return False
+    return True
+def busc_primos(num, num2):
+    lista_primos = []
+    for i in range (num, num2 + 1):
+        if num_primo (i) == True:
+            lista_primos.append(i)
+    return lista_primos 
+num = int(input("Digite o primeiro número inteiro: "))
+num2 = int(input("Digite o segundo número: "))
+resultado = busc_primos(num, num2)
+print (resultado)
